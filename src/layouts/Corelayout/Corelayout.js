@@ -9,7 +9,7 @@ export const Corelayout = ({ children }) => {
         <React.Fragment>
             <Navbar />
             <SecondaryNavbar />
-            <Home />
+            {children}
         </React.Fragment>
     );
 };
