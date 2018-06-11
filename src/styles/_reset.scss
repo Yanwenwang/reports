@@ -1,5 +1,6 @@
 @import './variables';
 
+h1,
 h4 {
     margin: 0;
     padding: 0;
@@ -9,4 +10,8 @@ h4 {
 ul {
     margin: 0;
     padding: 0;
+}
+
+body {
+    background: $gray-lightest;
 }
