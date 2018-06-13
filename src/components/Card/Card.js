@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Table, Button } from 'react-bootstrap';
 import './Card.scss';
 
@@ -29,7 +30,7 @@ export const Card = ({ number, icon, status, children }) => {
                 </tbody>
             </Table>
             <Button bsStyle="link" block>
-                Show Pending Reports
+                <Link to="/lists">Show Pending Reports</Link>
             </Button>
         </div>
     );
