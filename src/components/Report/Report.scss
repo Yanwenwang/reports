@@ -1,0 +1,28 @@
+@import '../../styles/variables';
+
+.report__tittle {
+    font-weight: bold;
+}
+
+.report__message {
+    color: $color-primary;
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 18px;
+    border: 1px solid $gray-light;
+    border-radius: 12px;
+    position: absolute;
+    left: 50%;
+    bottom: 3px;
+    transform: translate(-50%, 0);
+    background: $gray-lightest;
+}
+
+.report__border {
+    border: 1px solid $gray-light;
+}
+
+.report__icon--consider {
+    margin-right: 5px;
+    color: #d39e00;
+}
