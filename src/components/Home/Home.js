@@ -1,4 +1,6 @@
 import React from 'react';
+import SecondaryNavbar from '../../components/SecondaryNavbar/SecondaryNavbar';
+import LayoutContainer from '../../components/Shared/LayoutContainer';
 import CardList from '../Card/CardList';
 
 class Home extends React.Component {
@@ -10,7 +12,12 @@ class Home extends React.Component {
     render() {
         const { reports, isLoading } = this.props;
         return (
-            <CardList cards={reports}/>
+            <React.Fragment>
+                <SecondaryNavbar />
+                <LayoutContainer>
+                    <CardList cards={reports}/>
+                </LayoutContainer>
+            </React.Fragment>
         );
     }
 };

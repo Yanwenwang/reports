@@ -1,9 +1,9 @@
 import React from 'react';
 import './SecondaryNavbar.scss';
 
-export const SecondaryNavbar = () => {
+export const SecondaryNavbar = ({ children }) => {
     return (
-        <div className="secondarynav__container"></div>
+        <div className="secondarynav__container">{children}</div>
     );
 };
 
