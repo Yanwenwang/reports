@@ -24,11 +24,22 @@
     margin-right: 10px;
 }
 
+.nav__arrow {
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: -2px;
+}
+
 .nav__list {
+    display: flex;
     list-style: none;
 }
 
 .nav__item {
+    position: relative;
     display: inline-block;
     vertical-align: middle;
     color: white;
@@ -37,5 +48,10 @@
     &:focus,
     &:active {
         color: white;
+        text-decoration: none;
     }
+}
+
+.nav__item--active {
+    font-weight: bold;
 }

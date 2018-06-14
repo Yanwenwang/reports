@@ -1,6 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, Route } from 'react-router-dom';
 import './Navbar.scss';
+
+const HomeLink = () => (
+    <li>
+        <NavLink to="/" className="nav__item" activeClassName="nav__item--active" exact>Home</NavLink>
+    </li>
+);
+
+const ListLink = () => (
+    <li>
+        <i className="nav__arrow fa fa-angle-right" aria-hidden="true"></i>
+        <NavLink to="/lists" className="nav__item" activeClassName="nav__item--active" exact>Lists</NavLink>      
+    </li>
+);
+
+const ReportLink = () => (
+    <li>
+        <i className="nav__arrow fa fa-angle-right" aria-hidden="true"></i>
+        <NavLink to="/lists/report" className="nav__item" activeClassName="nav__item--active" exact>Report</NavLink>
+    </li>
+);
 
 export const Navbar = () => {
     return (
@@ -9,9 +29,9 @@ export const Navbar = () => {
                 <h4 className="nav__title">Reports</h4>
                 <i className="nav__circle fa fa-circle" aria-hidden="true"></i>
                 <ul className="nav__list">
-                    <li>
-                        <Link to="/" className="nav__item">Home</Link>
-                    </li>
+                    <Route path="/" component={HomeLink} />
+                    <Route path="/lists" component={ListLink} />
+                    <Route path="/lists/report" component={ReportLink} />
                 </ul>
             </nav>
         </div>
