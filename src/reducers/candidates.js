@@ -1,7 +1,7 @@
 import actionTypes from '../constants/actionTypes';
 
 export const initialState = {
-    candidates: [],
+    candidates: {},
     isLoading: false
 };
 
@@ -9,12 +9,17 @@ const ACTION_HANDLERS = {
     [actionTypes.CANDIDATES.GET.CALL]: (state, action) => {
         return {
             ...state,
-            candidates: [],
             isLoading: true
         };
     },
     [actionTypes.CANDIDATES.GET.SUCCESS]: (state, action) => {
-        const candidates = action.payload;
+        const candidatesArr = action.payload;
+
+        const candidates = candidatesArr.reduce((map, candidate) => {
+            map[candidate.id] = candidate;
+
+            return map;
+        }, {});
 
         return {
             ...state,
@@ -25,7 +30,6 @@ const ACTION_HANDLERS = {
     [actionTypes.CANDIDATES.GET.FAIL]: (state, action) => {
         return {
             ...state,
-            candidates: [],
             isLoading: false
         }
     }

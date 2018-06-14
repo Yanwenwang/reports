@@ -5,9 +5,11 @@ import Home from './Home';
 
 const mapStateToProps = (state) => {
     const { candidates, isLoading } = state.candidates;
+
     // create map of reports
-    const reportsMap = candidates.reduce((map, candidate) => {
+    const reportsMap = Object.keys(candidates).reduce((map, id) => {
         // loop though each candidate
+        const candidate = candidates[id];
         candidate.reports.forEach((report) => {
             // loop through each report
             const status = report.status;
