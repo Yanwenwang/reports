@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactTable from "react-table";
 import moment from 'moment';
-        
+import { Link } from 'react-router-dom';
+import SecondaryNavbar from '../../components/SecondaryNavbar/SecondaryNavbar';
+import LayoutContainer from '../../components/Shared/LayoutContainer';
+import './Lists.scss';
+
 const iconMap = {
     consider: <i className="fa fa-exclamation-circle" aria-hidden="true"></i>,
     suspended: <i className="fa fa-refresh" aria-hidden="true"></i>
@@ -47,13 +51,25 @@ class Lists extends React.Component {
         const { candidates, isLoading } = this.props;
 
         return (
-            <ReactTable 
-                className="-striped -highlight"
-                defaultPageSize={10}
-                data={candidates}
-                noDataText="No data available."
-                columns={columns}
-            />
+            <React.Fragment>
+                <SecondaryNavbar>
+                    Filter
+                </SecondaryNavbar>
+                <LayoutContainer>
+                    <ReactTable 
+                        className="-striped -highlight"
+                        defaultPageSize={10}
+                        data={candidates}
+                        noDataText="No data available."
+                        columns={columns}
+                        getTrProps={(state, rowInfo) => {
+                            return {
+                                onClick: () => this.props.history.push(`/lists/report/${rowInfo.row._original.id}`)
+                            }
+                        }}
+                    />
+                </LayoutContainer>
+            </React.Fragment>
         );
     }
 };

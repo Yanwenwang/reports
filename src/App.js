@@ -9,7 +9,7 @@ const App = () => (
     <Corelayout>
         <Route exact path="/" component={HomeContainer} />
         <Route exact path="/lists" component={ListsContainer} />
-        <Route exact path="/report" component={Report} />
+        <Route exact path="/lists/report/:id" component={Report} />
     </Corelayout>
 );
 
