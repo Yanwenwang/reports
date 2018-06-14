@@ -2,6 +2,7 @@
 
 .card__container {
     padding: 30px 15px 15px 15px;
+    margin-bottom: 30px;
     background: white;
     border: 1px solid $gray-light;
     border-radius: 5px;
@@ -22,10 +23,19 @@
     color: $gray;
 }
 
+.card__icon--consider {
+    color: $color-warning;
+}
+
 .card__status {
     color: $gray;
     margin-left: 5px;
     font-size: 14px;
+}
+
+.card__status--consider {
+    font-weight: bold;
+    color: $gray-dark;
 }
 
 .card__table {

@@ -3,19 +3,19 @@ import { Grid, Row, Col } from 'react-bootstrap';
 import Card from './Card';
 import './CardList.scss';
 
-export const CardList = ({ number, icon, status, children }) => {
+export const CardList = ({ cards }) => {
+    const cardsComponent = cards.map((card) => {
+        return (
+            <Col md={4} key={card.group}>
+                <Card card={card} />
+            </Col>
+        );
+    });
+
     return (
         <Grid fluid>
             <Row className="show-grid">
-                <Col md={4}>
-                    <Card />
-                </Col>
-                <Col md={4}>
-                    <Card />
-                </Col>
-                <Col md={4}>
-                    <Card />
-                </Col>
+                {cardsComponent}
             </Row>
         </Grid>
     );
