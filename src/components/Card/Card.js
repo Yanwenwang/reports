@@ -67,7 +67,7 @@ export const Card = ({ card }) => {
                             <Button bsStyle="link" block>
                                 <Link to={{
                                     pathname: '/lists',
-                                    search: `?status=${group}`
+                                    search: `?status=${group.toLowerCase()}`
                                 }}>Show {group} Reports</Link>
                             </Button>
                         </React.Fragment>

@@ -11,7 +11,7 @@ const HomeLink = () => (
 const ListLink = () => (
     <li>
         <i className="nav__arrow fa fa-angle-right" aria-hidden="true"></i>
-        <NavLink to="/lists" className="nav__item" activeClassName="nav__item--active" exact>Lists</NavLink>      
+        <NavLink to="/lists?status=all" className="nav__item" activeClassName="nav__item--active" exact>Lists</NavLink>      
     </li>
 );
 

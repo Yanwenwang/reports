@@ -1,3 +1,73 @@
+@import '../../styles/variables';
+
 .rt-tr-group {
     cursor: pointer;
+}
+
+.lists__dropdown-container {
+    line-height: 64px;
+    margin-left: 30px;
+}
+
+.lists__dropdown.lists__dropdown.lists__dropdown {
+    color: $color-primary;
+    font-weight: bold;
+    padding: 0;
+    box-shadow: none;
+    border: 0;
+    background: none;
+    
+    &:hover,
+    &:focus,
+    &:active, {
+        color: $color-primary;
+        background: none;
+    }
+
+    .caret {
+        color: $color-primary;
+    }
+}
+
+.dropdown-menu {
+    min-width: 280px;
+}
+
+.dropdown-menu>li>a {
+    padding: 14px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+    background: none;
+    color: $color-primary;
+    font-weight: bold;
+}
+
+.lists__num {
+    border: 1px solid $color-primary;
+    border-radius: 15px;
+    background: $color-primary;
+    color: white;
+    padding: 4px 12px;
+}
+
+.lists__status {
+    font-weight: bold;
+}
+
+.lists__num--left {
+    margin-left: 20px;
+}
+
+.lists__icon {
+    margin-right: 5px;
+    color: $gray;
+}
+
+.lists__icon--consider {
+    margin-right: 5px;
+    color: $color-warning;
 }
