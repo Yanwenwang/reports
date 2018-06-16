@@ -72,14 +72,13 @@ class Lists extends React.Component {
                             {
                                 filters.map((filter, index) => {
                                     const { display, status, count } = filter;
-                                    const href = `/lists?status=${status.toLowerCase()}`;
                                     const isActive = selectedStatus === status;
 
                                     return (
                                         <MenuItem key={index}
                                             eventKey={index}
-                                            href={href}
                                             active={isActive}
+                                            onClick={() => this.props.history.push(`/lists?status=${status.toLowerCase()}`)}
                                         >
                                             {display.charAt(0).toUpperCase() + display.slice(1)}
                                             <span className="lists__num">{count}</span>

@@ -1,5 +1,6 @@
 {
   "name": "reports",
+  "homepage": "http://yanwenwang.github.io/reports",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
