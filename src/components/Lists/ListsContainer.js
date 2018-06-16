@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import moment from 'moment';
-import { getFakeCandidates } from '../../actions/candidates';
+import { getCandidates } from '../../actions/candidates';
 import Lists from './Lists';
 
 const mapStateToProps = (state, ownProps) => {
@@ -70,7 +70,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = {
-    getCandidates: getFakeCandidates
+    getCandidates
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Lists);

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import moment from 'moment';
-import { getFakeCandidates } from '../../actions/candidates';
+import { getCandidates } from '../../actions/candidates';
 import Home from './Home';
 
 const mapStateToProps = (state) => {
@@ -50,7 +50,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = {
-    getCandidates: getFakeCandidates
+    getCandidates
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
