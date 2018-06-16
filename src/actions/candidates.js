@@ -27,6 +27,31 @@ export const getCandidates= () => {
     };
 };
 
+export const getCandidate = (id) => {
+    return (dispatch) => {
+        dispatch({
+            type: actionTypes.CANDIDATE.GET.CALL
+        });
+        
+        api.getCandidate(id)
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                dispatch({
+                    type: actionTypes.CANDIDATE.GET.SUCCESS,
+                    payload: data
+                });
+            })
+            .catch((error) => {
+                dispatch({
+                    type: actionTypes.CANDIDATE.GET.FAIL,
+                    payload: error
+                });
+            });
+    }
+};
+
 
 export const getFakeCandidates = () => {
     return (dispatch) => {

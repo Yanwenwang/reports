@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactTable from "react-table";
 import moment from 'moment';
-import { Link } from 'react-router-dom';
 import SecondaryNavbar from '../../components/SecondaryNavbar/SecondaryNavbar';
 import LayoutContainer from '../../components/Shared/LayoutContainer';
 import './Lists.scss';

@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { getCandidate } from '../../actions/candidates';
 import Report from './Report';
 
 const mapStateToProps = (state, ownProps) => {
@@ -7,8 +8,13 @@ const mapStateToProps = (state, ownProps) => {
 
     return {
         isLoading,
+        id,
         candidate: candidates[id]
     };
 };
 
-export default connect(mapStateToProps, null)(Report);
+const mapDispatchToProps = {
+    getCandidate
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Report);

@@ -1,7 +1,16 @@
 @import '../../styles/variables';
 
+.report__secnav {
+    margin-left: 30px;
+    line-height: 64px;
+    font-weight: bold;
+    text-align: center;
+    color: $color-primary;
+}
+
 .report__tittle {
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .report__message {
@@ -22,7 +31,70 @@
     border: 1px solid $gray-light;
 }
 
+.report__icon {
+    color: $gray;
+    margin-right: 5px;
+}
+
 .report__icon--consider {
     margin-right: 5px;
     color: $color-warning;
+}
+
+.report__table {
+    margin-top: 20px;
+}
+
+.report__tab {
+    display: inline-block;
+    margin-left: 30px;
+    line-height: 64px;
+    margin-top: -3px;
+    cursor: pointer;
+    color: $gray;
+}
+
+.report__tab--active {
+    font-weight: bold;
+    border-bottom: 3px solid $color-primary;
+    color: $gray-dark;
+}
+
+.report__circle {
+    color: $gray-light;
+    margin-left: 5px;
+    font-size: 8px;
+    vertical-align: middle;
+}
+
+.report__circle--right {
+    margin-right: 5px;
+}
+
+.report__circle--consider {
+    color: $color-warning;
+}
+
+.report__circle--ssn {
+    font-size: 5px;
+    color: $gray-dark;
+    margin-left: 2px;
+}
+
+.report__prop {
+    color: $gray;
+}
+
+.report__age {
+    color: $gray;
+    margin-left: 5px;
+}
+
+.report__check {
+    color: $color-green;
+    margin-left: 5px;
+}
+
+.report__ssn {
+    margin-left: 8px;
 }

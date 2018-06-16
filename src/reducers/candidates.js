@@ -32,6 +32,31 @@ const ACTION_HANDLERS = {
             ...state,
             isLoading: false
         }
+    },
+    [actionTypes.CANDIDATE.GET.CALL]: (state, action) => {
+        return {
+            ...state,
+            isLoading: true
+        };
+    },
+    [actionTypes.CANDIDATE.GET.SUCCESS]: (state, action) => {
+        const candidates = state.candidates;
+        const candidate = action.payload;
+
+        return {
+            ...state,
+            candidates: {
+                ...candidates,
+                [candidate.id]: candidate
+            },
+            isLoading: false
+        };
+    },
+    [actionTypes.CANDIDATE.GET.FAIL]: (state, action) => {
+        return {
+            ...state,
+            isLoading: false
+        }
     }
 };
 

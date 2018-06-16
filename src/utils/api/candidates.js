@@ -6,6 +6,15 @@ export const getCandidates = () => {
     });
 };
 
+export const getCandidate = (id) => {
+    const url = `${baseUrl}/${id}`;
+
+    return fetch(url, {
+        method: 'GET'
+    });
+};
+
 export default {
-    getCandidates
+    getCandidates,
+    getCandidate
 };

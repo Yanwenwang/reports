@@ -6,6 +6,13 @@ const actionTypes = {
             FAIL: 'CANDIDATES.GET.FAIL'
         }
     },
+    CANDIDATE: {
+        GET: {
+            CALL: 'CANDIDATE.GET.CALL',
+            SUCCESS: 'CANDIDATE.GET.SUCCESS',
+            FAIL: 'CANDIDATE.GET.FAIL'
+        }
+    },
     ROUTER: {
         LOCATION_CHANGE: '@@router/LOCATION_CHANGE'
     }
